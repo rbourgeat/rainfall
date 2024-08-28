@@ -1,0 +1,29 @@
+
+- List file with ls -la and found a level0 file.
+
+- Try to cat the file and see it's a binary file.
+
+- Try to exec the file and get segfault error.
+
+- Try to pass argument when executing file and get No! message.
+
+- Using gdb level0 for debug
+
+- Try info functions and see a main
+
+- Set a breakpoint with b main
+
+- Display asm code with disas main
+
+- See a cmp 0x1a7,%eax at 0x08048ed9
+
+- Set a new breakpoint at *0x08048ed9
+
+- Run with random arg and print 0x1a7, we get $1 = 423
+
+- Exec ./level 423 and get prompt, try whoami and see level1
+
+- Check level1 files with la -la /home/user/level1
+
+- We see the .pass file and cat it for get the flag
+c
