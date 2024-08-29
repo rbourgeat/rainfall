@@ -21,9 +21,8 @@
 
 - Run with random arg and print 0x1a7, we get $1 = 423
 
-- Exec ./level 423 and get prompt, try whoami and see level1
+- Exec ./level0 423 and get prompt, try whoami and see level1
 
-- Check level1 files with la -la /home/user/level1
+- Check level1 files with ls -la /home/user/level1
 
 - We see the .pass file and cat it for get the flag
-c
