@@ -9,17 +9,15 @@
 
 - Using gdb level0 for debug
 
-- Try info functions and see a main
-
-- Set a breakpoint with b main
+- Try `info functions` and see a main
 
 - Display asm code with disas main
 
 - See a cmp 0x1a7,%eax at 0x08048ed9
 
-- Set a new breakpoint at *0x08048ed9
+- Set a breakpoint at *0x08048ed9
 
-- Run with random arg and print 0x1a7, we get $1 = 423
+- Run with random arg and `print 0x1a7`, we get $1 = 423
 
 - Exec ./level0 423 and get prompt, try whoami and see level1
 

