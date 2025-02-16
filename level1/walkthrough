@@ -1,9 +1,7 @@
 
 - Like level0, `gdb level1`, info functions and see a main and run
 
-- `disas main` and run and we see main function call run
-
-- And run function do a sys call
+- `disas main` and `disas run` and we see run function calls system, main calls gets (get string from stdin)
 
 - We see buffer of $0x50 bytes = 80 in main function
 
@@ -15,5 +13,6 @@
 > 0x08048444 = 0x08 0x04 0x84 0x44 because it's a 4-bytes value
 > And we nee to use it as little endian format so we reverse
 > 0x08 0x04 0x84 0x44 => 0x44 0x84 0x04 0x08 = \x44\x84\x04\x08
+> The four bytes causing the buffer overflow are used to indicate the address to use as a return address (instead of the EIP register)
 
 - Cat /home/user/level2/.pass and get the flag
